@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="8.346841000000015">
+<testsuite name="fixtures.spec.ts" timestamp="2026-10-02T14:21:59.111Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.659" errors="0">
+<testcase name="Користувач може авторизуватись" classname="fixtures.spec.ts" time="4.659">
+</testcase>
+</testsuite>
+</testsuites>
