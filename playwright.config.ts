@@ -1,16 +1,22 @@
 import 'dotenv/config';
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
 
   use: {
     baseURL: 'https://qauto.forstudy.space',
+    headless: true,
 
     httpCredentials: {
       username: 'guest',
       password: 'welcome2qauto',
     },
-  
   },
+   projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+  ],
 });

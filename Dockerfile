@@ -1,11 +1,13 @@
-FROM mcr.microsoft.com/playwright:v1.64.0-noble
+FROM node:22-bookworm
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 RUN npm ci
 
+RUN npx playwright install --with-deps chromium
+
 COPY . .
 
-CMD ["npx", "playwright", "test"]
+CMD ["npx", "playwright", "test", "--project=chromium"]
